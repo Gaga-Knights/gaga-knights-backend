@@ -5,7 +5,7 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     const users = [...Array(1)].map((_) => ({
-      userName: 'admin',
+      username: 'admin',
       email: 'admin@email.com',
       passwordDigest: 'password',
       createdAt: new Date(),
