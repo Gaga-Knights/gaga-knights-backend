@@ -23,7 +23,15 @@ module.exports = (sequelize, DataTypes) => {
     dexterity: DataTypes.INTEGER,
     intelligence: DataTypes.INTEGER,
     movement: DataTypes.INTEGER,
-    gold: DataTypes.INTEGER
+    gold: DataTypes.INTEGER,
+    userId: {
+      type: DataTypes.INTEGER,
+      onDelete: 'CASCADE',
+      references: {
+        model: 'users',
+        key: 'id'
+      }
+    }
   }, {
     sequelize,
     modelName: 'Knights',
